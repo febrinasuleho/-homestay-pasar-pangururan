@@ -6,25 +6,24 @@
   padding: 24px 16px 64px;
 }
 
-/* Palette warmer + more “brand” (uses CSS vars from style.css) */
+/* Modern brand palette */
 :root {
-  --accent: #8b5cf6; /* ungu lebih modern */
-  --accent-bg: rgba(139, 92, 246, 0.12);
-  --accent-border: rgba(139, 92, 246, 0.5);
-}
+  --accent: #7c3aed; /* purple */
+  --accent-bg: rgba(124, 58, 237, 0.13);
+  --accent-border: rgba(124, 58, 237, 0.52);
 
-/* “Surface” backgrounds yang lebih rich */
-:root {
-  --surface: rgba(255, 255, 255, 0.62);
-  --surface-2: rgba(255, 255, 255, 0.42);
-  --surface-ink: rgba(0, 0, 0, 0.04);
+  --surface: rgba(255, 255, 255, 0.66);
+  --surface-2: rgba(255, 255, 255, 0.44);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface: rgba(24, 25, 33, 0.62);
-    --surface-2: rgba(24, 25, 33, 0.45);
-    --surface-ink: rgba(255, 255, 255, 0.06);
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.14);
+    --accent-border: rgba(192, 132, 252, 0.48);
+
+    --surface: rgba(22, 23, 29, 0.7);
+    --surface-2: rgba(22, 23, 29, 0.46);
   }
 }
 
@@ -55,7 +54,7 @@
 }
 
 .navbar__brand {
-  font-weight: 750;
+  font-weight: 800;
   color: var(--text-h);
   letter-spacing: -0.2px;
   white-space: nowrap;
@@ -78,7 +77,7 @@
 .navlink:hover {
   background: var(--accent-bg);
   transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.12);
+  box-shadow: 0 14px 30px rgba(124, 58, 237, 0.14);
 }
 
 .navlink--active {
@@ -104,14 +103,14 @@
 .hero > div {
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 28px 24px;
   box-shadow: var(--shadow);
 }
 
 @media (prefers-color-scheme: dark) {
   .hero > div {
-    background: rgba(31, 32, 40, 0.4);
+    background: rgba(31, 32, 40, 0.42);
   }
 }
 
@@ -178,12 +177,12 @@
 
 @media (prefers-color-scheme: dark) {
   .stat {
-    background: rgba(31, 32, 40, 0.35);
+    background: rgba(31, 32, 40, 0.36);
   }
 }
 
 .stat__value {
-  font-weight: 800;
+  font-weight: 900;
   color: var(--text-h);
   font-size: 18px;
   letter-spacing: -0.3px;
@@ -205,7 +204,7 @@
   cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease,
     border-color 160ms ease;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .btn:hover {
@@ -219,7 +218,7 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-bg), rgba(139, 92, 246, 0.22));
+  background: linear-gradient(135deg, var(--accent-bg), rgba(124, 58, 237, 0.22));
   border-color: var(--accent-border);
   color: var(--accent);
 }
@@ -246,7 +245,7 @@
 .homestay-card {
   background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 22px;
   padding: 16px;
   box-shadow: var(--shadow);
   display: flex;
@@ -259,14 +258,14 @@
 
 @media (prefers-color-scheme: dark) {
   .homestay-card {
-    background: rgba(31, 32, 40, 0.4);
+    background: rgba(31, 32, 40, 0.42);
   }
 }
 
 .homestay-card:hover {
   transform: translateY(-2px);
   border-color: var(--accent-border);
-  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.14);
+  box-shadow: 0 18px 45px rgba(124, 58, 237, 0.16);
 }
 
 .homestay-card__top {
@@ -276,7 +275,7 @@
 }
 
 .homestay-card__title {
-  font-weight: 850;
+  font-weight: 900;
   color: var(--text-h);
   letter-spacing: -0.2px;
   font-size: 18px;
@@ -296,11 +295,11 @@
   height: 9px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.16);
 }
 
 .homestay-card__price {
-  font-weight: 900;
+  font-weight: 950;
   letter-spacing: -0.2px;
   color: var(--text-h);
   font-size: 16px;
@@ -320,7 +319,7 @@
   border-radius: 999px;
   font-size: 13px;
   color: var(--text-h);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(124, 58, 237, 0.26);
   background: rgba(255, 255, 255, 0.18);
   max-width: 100%;
 }
@@ -328,7 +327,7 @@
 @media (prefers-color-scheme: dark) {
   .chip {
     background: rgba(0, 0, 0, 0.14);
-    border-color: rgba(139, 92, 246, 0.32);
+    border-color: rgba(192, 132, 252, 0.32);
   }
 }
 
